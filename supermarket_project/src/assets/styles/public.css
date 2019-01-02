@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* 标题 */
+.tit h1 {
+    line-height: 50px;
+    padding-top: 35px;
+    color: #dad8d6;
+    text-align: center;
+  }
+  .tit p {
+    font-size: 12px;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 20px;
+    color: #8a8886;
+  }
+  .tit p span {
+    color: #dad8d6;
+  }
+  .tit p a {
+    color: #dad8d6;
+  }
+
+    /* aside */
+    .el-aside {
+      background: url("../imgs/asidbg.png");
+      color: #333;
+    }
+    
+    /* 改菜单背景色 */
+   .el-submenu__title {
+    background: url("../imgs/menubg_06.png");
+    margin-top: 10px;
+    border-radius: 10px 0 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+   }
+   /* 设置激活样式 */
+   .is-opened .el-submenu__title{
+    background: #f6f6f6 !important;
+    color: #333!important;
+   }
+      /* 设置ul的宽度与 */
+   .el-menu{
+    width: 200px;
+    border: none;
+  }
+   /* 设置最外层ul 让其脱离最左边 */
+   .el-menu-vertical-demo{
+     margin-left: 30px;
+     margin-bottom: 40px;
+   }
+/* 设置子菜单的样式 */
+   .el-submenu .el-menu-item{
+    text-align: right;
+     font-size: 12px;
+    height: 30px;
+    color: #c0bcb7 !important;
+    line-height: 30px;
+    padding: 0 10px;
+    min-width: 0px;
+   }
+   .el-submenu .el-menu-item a{
+     display: inline-block;
+     line-height: 30px;
+     color: #c0bcb7;
+     text-decoration: none;
+   }
+   /* 去hover效果 */
+   .el-menu--inline .el-menu-item:hover, .el-menu-item:focus{
+     background-color: transparent!important;
+   }
+   /* 激活样式 */
+   .el-menu--inline .is-active a{
+    color: #f1f138 !important;
+    background: transparent;
+   }
+/* 添加伪类小三角 */
+   .el-menu--inline .is-active::after{
+     display: inline-block;
+     content: "";
+     width: 0;
+     height: 0;
+     border: 6px solid ;
+     border-color: transparent #f1f138 transparent transparent;
+     position: absolute;
+     right: 0;
+     top: 10px;
+   }
+/* 隐藏小三角 */
+   .el-icon-arrow-down:before{
+     display: none;
+   }
+
+  
+   .el-header, .el-footer {
+    color: #333;
+    text-align: left;
+    background: #f9f9f9;
+  }
+   /* header样式 */
+   .el-header h1{
+     padding-top: 30px;
+   }
+   .el-header p{
+     line-height: 40px;
+   }
+   /* footer */
+   .el-footer{
+     line-height: 50px;
+     font-size: 14px;
+   }
+  /* main */
+   .el-main {
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 0 !important;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+  .content>*{
+    width: 100%;
+  }
+  /* 横条 */
+  .hengtiao{
+    height: 2px;
+    border: 1px solid #ccc;
+    background-color: #e7e7e7;
+  }
+  /* icon字体 */
+  .el-button--text{
+    font-size: 16px;
+  }
