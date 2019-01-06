@@ -57,7 +57,7 @@ export default {
         if (valid) {
           // 允许发送cookie的证书
           this.axios.defaults.withCredentials =true;
-          this.axios.post("http://localhost:9090/login",this.qs.stringify(this.userinfo))
+          this.axios.post("http://172.16.4.225:9090/login",this.qs.stringify(this.userinfo))
           .then(success => {
             if(success.data.code){
               this.$message({

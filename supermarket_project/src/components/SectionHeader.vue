@@ -14,7 +14,7 @@ export default {
     }
   },
   created(){
-    this.axios.get('http://localhost:9090/getcookie')
+    this.axios.get('http://172.16.4.225:9090/getcookie')
     .then(successs => {
         let result = successs.data;
         if(result.code){

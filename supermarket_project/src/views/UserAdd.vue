@@ -93,7 +93,7 @@ export default {
       //  调用组件的验证方法 提交时验证
       this.$refs[formName].validate(valid => {
         if (valid) {
-          this.axios.post('http://localhost:9090/user/add',this.qs.stringify(this.userInfo1))
+          this.axios.post('http://172.16.4.225:9090/user/add',this.qs.stringify(this.userInfo1))
           .then(success => {
             if(success.data.code){
               // 使用element组件消息提示

@@ -89,7 +89,7 @@ export default {
   methods:{
     // 用户编辑成功
     editOk(){
-      this.axios.post('http://localhost:9090/user/usersave',this.qs.stringify(this.userinfo))
+      this.axios.post('http://172.16.4.225:9090/user/usersave',this.qs.stringify(this.userinfo))
       .then(success => {
         let result = success.data
         if(result.code){
@@ -109,7 +109,7 @@ export default {
       
     },
     handleEdit(userid) {
-      this.axios.get('http://localhost:9090/user/useredit?userid='+userid)
+      this.axios.get('http://172.16.4.225:9090/user/useredit?userid='+userid)
       .then(success => {
         this.dialogFormVisible = true;        
         let oldUserData = success.data[0];
@@ -121,7 +121,7 @@ export default {
     },
     // ajax请求数据
     ajaxToUserList(){
-      this.axios.get("http://localhost:9090/user")
+      this.axios.get("http://172.16.4.225:9090/user")
       .then(success => {
         this.userList=success.data;
       })
@@ -136,7 +136,7 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          this.axios.get('http://localhost:9090/user/userdelete?userid='+userid)
+          this.axios.get('http://172.16.4.225:9090/user/userdelete?userid='+userid)
           .then(success => {
             let result = success.data;
             if(result.code){

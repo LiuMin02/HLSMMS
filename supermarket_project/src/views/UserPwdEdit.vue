@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     passChange(){
-      this.axios.post("http://localhost:9090/user/pwdedit",this.qs.stringify(this.passEdit))
+      this.axios.post("http://172.16.4.225:9090/user/pwdedit",this.qs.stringify(this.passEdit))
       .then(success => {
         let result = success.data;
         if(result.code){
@@ -86,7 +86,7 @@ export default {
             type: 'success'
           });
           // 发送ajax 清除cookie重新登录
-          this.axios.get("http://localhost:9090/loginout")
+          this.axios.get("http://172.16.4.225:9090/loginout")
           .then(successs => {
               let result = successs.data;
               if(result.code){

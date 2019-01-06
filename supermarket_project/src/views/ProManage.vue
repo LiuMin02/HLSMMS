@@ -173,7 +173,7 @@ export default {
       this.proInfo = thisRow;
     },
     sendAjax(){
-      this.axios.get('http://localhost:9090/product?classify='+this.proSerch.classify+'&keyWords='+this.proSerch.keyWords+'&currPage='+this.currentPage+'&pageSize='+this.pageSize)
+      this.axios.get('http://172.16.4.225:9090/product?classify='+this.proSerch.classify+'&keyWords='+this.proSerch.keyWords+'&currPage='+this.currentPage+'&pageSize='+this.pageSize)
       .then(success => {
         let result = success.data.product;
         this.proList = result;
@@ -197,7 +197,7 @@ export default {
       });
     },
     proUpdate(){
-      this.axios.post("http://localhost:9090/product/save",this.qs.stringify(this.proInfo))
+      this.axios.post("http://172.16.4.225:9090/product/save",this.qs.stringify(this.proInfo))
       .then( success => {
         let result = success.data;
         if(result.code){
